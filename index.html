@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-filter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <h1 class="header">Photo filter</h1>
+    
+            <div class="filter-area">
+                <div class="controls">
+                    <label for="spacing" class="label-controlled-input">Frame:
+                        <input class="input-controlled" type="range" name="spacing" 
+                                min="0" max="100" value="10" data-metrics="px">
+                    </label>
+                    <label for="base-color" class="label-controlled-input">Frame-color:
+                        <input class="input-controlled" type="color" name="base-color" value="#ffc600">
+                    </label>
+                    <label for="blur" class="label-controlled-input">Blur:
+                        <input class="input-controlled" type="range" name="blur" 
+                                min="0" max="25" value="0" data-metrics="px">
+                    </label>
+                    <label for="opacity" class="label-controlled-input">Opacity:
+                        <input class="input-controlled" type="range" name="opacity" 
+                                min="0" max="100" value="100" data-metrics="%">
+                    </label>
+                    <label for="brightness" class="label-controlled-input">Brightness:
+                        <input class="input-controlled" type="range" name="brightness" 
+                                min="0" max="200" value="100" data-metrics="%">
+                    </label>
+                    <label for="contrast" class="label-controlled-input">Contrast:
+                        <input class="input-controlled" type="range" name="contrast" 
+                                min="0" max="200" value="100" data-metrics="%">
+                    </label>
+                    <label for="grayscale" class="label-controlled-input">Grayscale:
+                        <input class="input-controlled" type="range" name="grayscale" 
+                                min="0" max="100" value="0" data-metrics="%">
+                    </label>
+                    <label for="saturate" class="label-controlled-input">Saturate:
+                        <input class="input-controlled" type="range" name="saturate" 
+                                min="0" max="200" value="100" data-metrics="%">
+                    </label>
+                    <label for="sepia" class="label-controlled-input">Sepia:
+                        <input class="input-controlled" type="range" name="sepia" 
+                                min="0" max="100" value="0" data-metrics="%">
+                    </label>
+                    <label for="hue-rotate" class="label-controlled-input">Hue-rotate:
+                        <input class="input-controlled" type="range" name="hue-rotate" 
+                                min="0" max="359" value="0" data-metrics="deg">
+                    </label>
+                    <label for="invert" class="label-controlled-input">Invert:
+                        <input class="input-controlled" type="range" name="invert" 
+                                min="0" max="100" value="0" data-metrics="%">
+                    </label>   
+                    
+                    
+                    <button class="btn reset-btn">
+                        Reset
+                    </button>
+    
+                    <label for="image-file" class="btn load-btn">
+                        Load Image
+                        <input class="input-file" type="file" id="image-file" name="image-file" accept=".jpeg, .png">
+                    </label>
+                    
+                </div>
+                
+                <div class="working-area">
+                    <div class="selected-img-wrapper">
+                        <img src="assets/img/mountains.jpg" alt="photo">
+                    </div>
+                    
+                    <div class="presets">
+                        <div class="preset-card">
+                            <img class="preset" id="brooklyn-preset" src="assets/img/mountains.jpg" alt="photo with brooklyn-preset" width="100%">
+                            <p>Brooklyn</p>
+                        </div>
+                        <div class="preset-card">
+                            <img class="preset" id="valencia-preset" src="assets/img/mountains.jpg" alt="photo with valencia-preset" width="100%">
+                            <p>Valencia</p>
+                        </div>
+                        <div class="preset-card">
+                            <img class="preset" id="clarendon-preset" src="assets/img/mountains.jpg" alt="photo with clarendon-preset" width="100%">
+                            <p>Clarendon</p>
+                        </div>
+                        <div class="preset-card">
+                            <img class="preset" id="moon-preset" src="assets/img/mountains.jpg" alt="photo with moon-preset" width="100%">
+                            <p>Moon</p>
+                        </div>
+                        <div class="preset-card">
+                            <img class="preset" id="rise-preset" src="assets/img/mountains.jpg" alt="photo with rise-preset" width="100%">
+                            <p>Rise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
